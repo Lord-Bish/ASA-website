@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elegance Beauty Salon</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#7c3aed",
+            secondary: "#4c1d95",
+            accent: "#f5f3ff",
+            dark: "#1f1f1f"
+          },
+          fontFamily: {
+            heading: ["Playfair Display", "serif"],
+            body: ["Inter", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #f5f3ff;
+    }
+
+    .glass {
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.88);
+    }
+
+    .hero-overlay {
+      background: linear-gradient(to right, rgba(0,0,0,0.72), rgba(0,0,0,0.25));
+    }
+
+    .service-card:hover img {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body class="font-body text-dark">
+
+  <!-- Floating CTA -->
+  <a href="#contact"
+     class="fixed bottom-5 right-5 z-50 bg-primary text-white px-5 py-3 rounded-full shadow-2xl hover:bg-secondary transition md:hidden">
+    Book Now
+  </a>
+
+  <!-- Header -->
+  <header class="sticky top-0 z-40 glass border-b border-black/5">
+    <div class="max-w-7xl mx-auto px-5">
+      <div class="flex items-center justify-between h-20">
+
+        <a href="#home" class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full bg-primary flex items-center justify-center text-white">
+            <i class="fa-solid fa-spa"></i>
+          </div>
+
+          <div>
+            <h1 class="font-heading text-2xl font-semibold">
+              Elegance
+            </h1>
+            <p class="text-xs tracking-[0.3em] uppercase text-secondary">
+              Beauty Salon
+            </p>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#services" class="hover:text-primary transition">Services</a>
+          <a href="#gallery" class="hover:text-primary transition">Gallery</a>
+          <a href="#pricing" class="hover:text-primary transition">Pricing</a>
+          <a href="#reviews" class="hover:text-primary transition">Reviews</a>
+          <a href="#contact" class="hover:text-primary transition">Contact</a>
+        </nav>
+
+        <div class="hidden md:block">
+          <a href="#contact"
+             class="bg-dark hover:bg-secondary transition text-white px-6 py-3 rounded-full text-sm tracking-wide uppercase">
+            Book Appointment
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn"
+                aria-label="Open mobile menu"
+                class="md:hidden text-2xl">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div id="mobileMenu" class="hidden md:hidden pb-6">
+        <div class="flex flex-col gap-4">
+          <a href="#services" class="mobile-link">Services</a>
+          <a href="#gallery" class="mobile-link">Gallery</a>
+          <a href="#pricing" class="mobile-link">Pricing</a>
+          <a href="#reviews" class="mobile-link">Reviews</a>
+          <a href="#contact" class="mobile-link">Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home"
+           class="relative min-h-screen flex items-center">
+
+    <img
+      src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1600&auto=format&fit=crop"
+      alt="Luxury beauty salon"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+
+    <div class="absolute inset-0 hero-overlay"></div>
+
+    <div class="relative max-w-7xl mx-auto px-5 py-24">
+      <div class="max-w-2xl text-white">
+        <p class="uppercase tracking-[0.35em] text-primary mb-5 text-sm">
+          Luxury Beauty Experience
+        </p>
+
+        <h2 class="font-heading text-5xl md:text-7xl leading-tight mb-6">
+          Timeless Beauty,
+          Crafted With Care
+        </h2>
+
+        <p class="text-lg md:text-xl text-white/80 leading-relaxed mb-10">
+          Premium nails, lashes, hair styling, and brow artistry in a calm,
+          elegant environment designed around you.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="#services"
+             class="bg-primary hover:bg-secondary transition px-8 py-4 rounded-full uppercase tracking-wide text-sm">
+            Explore Services
+          </a>
+
+          <a href="#contact"
+             class="border border-white/40 hover:bg-white hover:text-dark transition px-8 py-4 rounded-full uppercase tracking-wide text-sm">
+            Book Consultation
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-24">
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <p class="uppercase tracking-[0.3em] text-primary text-sm mb-4">
+          Our Services
+        </p>
+
+        <h2 class="font-heading text-4xl md:text-5xl mb-6">
+          Signature Treatments
+        </h2>
+
+        <p class="text-gray-600 leading-relaxed">
+          Every appointment is tailored to elevate your natural beauty with
+          precision, luxury products, and expert care.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
+
+        <article class="service-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition duration-500">
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800&auto=format&fit=crop"
+              class="w-full h-72 object-cover transition duration-700"
+              alt="Nail art"
+            />
+          </div>
+
+          <div class="p-7">
+            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-5">
+              <i class="fa-solid fa-hand-sparkles"></i>
+            </div>
+
+            <h3 class="font-heading text-2xl mb-3">
+              Nail Art
+            </h3>
+
+            <p class="text-gray-600 mb-6">
+              Elegant manicures, acrylics, gel polish, and custom nail design.
+            </p>
+
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-primary font-medium">From £45</span>
+              <span class="text-gray-500">60 mins</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition duration-500">
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop"
+              class="w-full h-72 object-cover transition duration-700"
+              alt="Lashes"
+            />
+          </div>
+
+          <div class="p-7">
+            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-5">
+              <i class="fa-solid fa-eye"></i>
+            </div>
+
+            <h3 class="font-heading text-2xl mb-3">
+              Lash Extensions
+            </h3>
+
+            <p class="text-gray-600 mb-6">
+              Natural and volume lash sets designed for effortless glamour.
+            </p>
+
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-primary font-medium">From £65</span>
+              <span class="text-gray-500">90 mins</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition duration-500">
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=800&auto=format&fit=crop"
+              class="w-full h-72 object-cover transition duration-700"
+              alt="Hair styling"
+            />
+          </div>
+
+          <div class="p-7">
+            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-5">
+              <i class="fa-solid fa-scissors"></i>
+            </div>
+
+            <h3 class="font-heading text-2xl mb-3">
+              Hair Styling
+            </h3>
+
+            <p class="text-gray-600 mb-6">
+              Precision cuts, luxury styling, color refresh, and treatments.
+            </p>
+
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-primary font-medium">From £75</span>
+              <span class="text-gray-500">90 mins</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="service-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition duration-500">
+          <div class="overflow-hidden">
+            <img
+              src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=800&auto=format&fit=crop"
+              class="w-full h-72 object-cover transition duration-700"
+              alt="Brows"
+            />
+          </div>
+
+          <div class="p-7">
+            <div class="w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-5">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+
+            <h3 class="font-heading text-2xl mb-3">
+              Brow Design
+            </h3>
+
+            <p class="text-gray-600 mb-6">
+              Brow shaping, tinting, and lamination for refined definition.
+            </p>
+
+            <div class="flex items-center justify-between text-sm">
+              <span class="text-primary font-medium">From £35</span>
+              <span class="text-gray-500">45 mins</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-14">
+        <div class="max-w-2xl">
+          <p class="uppercase tracking-[0.3em] text-primary text-sm mb-4">
+            Gallery
+          </p>
+
+          <h2 class="font-heading text-4xl md:text-5xl mb-6">
+            Recent Transformations
+          </h2>
+
+          <p class="text-gray-600">
+            A glimpse into our most loved beauty experiences and signature looks.
+          </p>
+        </div>
+
+        <a href="#contact"
+           class="text-primary font-medium hover:text-secondary transition">
+          Book Your Appointment →
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <img src="https://images.unsplash.com/photo-1487412912498-0447578fcca8?q=80&w=1000&auto=format&fit=crop"
+             class="rounded-3xl h-96 object-cover w-full hover:scale-[1.02] transition duration-500"
+             alt="Beauty treatment">
+
+        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=1000&auto=format&fit=crop"
+             class="rounded-3xl h-96 object-cover w-full hover:scale-[1.02] transition duration-500"
+             alt="Salon service">
+
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1000&auto=format&fit=crop"
+             class="rounded-3xl h-96 object-cover w-full hover:scale-[1.02] transition duration-500"
+             alt="Hair styling">
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-24">
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <p class="uppercase tracking-[0.3em] text-primary text-sm mb-4">
+          Pricing
+        </p>
+
+        <h2 class="font-heading text-4xl md:text-5xl mb-6">
+          Beauty Packages
+        </h2>
+
+        <p class="text-gray-600">
+          Transparent pricing with luxury-level care and premium products.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+        <div class="bg-white rounded-3xl p-10 shadow-sm border border-black/5">
+          <p class="uppercase tracking-wide text-primary text-sm mb-3">
+            Essential
+          </p>
+
+          <h3 class="font-heading text-4xl mb-4">£85</h3>
+
+          <p class="text-gray-600 mb-8">
+            Ideal for a refreshing beauty appointment.
+          </p>
+
+          <ul class="space-y-4 text-gray-700 mb-10">
+            <li><i class="fa-solid fa-check text-primary mr-3"></i>Single treatment</li>
+            <li><i class="fa-solid fa-check text-primary mr-3"></i>Consultation included</li>
+            <li><i class="fa-solid fa-check text-primary mr-3"></i>Premium products</li>
+          </ul>
+
+          <a href="#contact"
+             class="block text-center bg-dark hover:bg-secondary text-white transition rounded-full py-4">
+            Select Package
+          </a>
+        </div>
+
+        <div class="bg-dark text-white rounded-3xl p-10 shadow-2xl scale-100 lg:scale-105 relative overflow-hidden">
+          <div class="absolute top-5 right-5 bg-primary text-xs uppercase tracking-wide px-3 py-1 rounded-full">
+            Most Popular
+          </div>
+
+          <p class="uppercase tracking-wide text-primary text-sm mb-3">
+            Premium
+          </p>
+
+          <h3 class="font-heading text-4xl mb-4">£150</h3>
+
+          <p class="text-white/70 mb-8">
+            Our signature luxury salon experience.
+          </p>
+
+          <ul class="space-y-4 text-white/90 mb-10">
+            <li><i class="fa-solid fa-check text-primary mr-3"></i>Two treatments</li>
+            <li><i class="fa-solid fa-check text-primary mr-3"></i>Luxury styling</li>
+            <li><i class="fa-solid fa-check text-primary mr-3"></i>Priority booking</li>
+          </ul>
+
+          <a href="#contact"
+             class="block text-center bg-primary hover:bg-secondary transition rounded-full py-4">
+            Select Package
+          </a>
+        </div>
+
+        <div class="bg-white rounded-3xl p-10 shadow-sm border border-black/5">
+          <p class="uppercase tracking-wide text-primary text-sm mb-3">
+            VIP
+          </p>
+
+          <h3 class="font-heading text-4xl mb-4">£250</h3>
+
+          <p class="text-gray-600 mb-8">
+            Full transformation with personalised treatment.
+          </p>
+
+          <ul class="space-y-4 text-gray-700 mb-10">
+            <li><i class="fa-solid fa-check text-primary mr-3"></i>Full beauty package</li>
+            <li><i class="fa-solid fa-check text-primary mr-3"></i>Senior specialist</li>
+            <li><i class="fa-solid fa-check text-primary mr-3"></i>Aftercare support</li>
+          </ul>
+
+          <a href="#contact"
+             class="block text-center bg-dark hover:bg-secondary text-white transition rounded-full py-4">
+            Select Package
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="reviews" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <p class="uppercase tracking-[0.3em] text-primary text-sm mb-4">
+          Reviews
+        </p>
+
+        <h2 class="font-heading text-4xl md:text-5xl mb-6">
+          What Clients Say
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+        <div class="bg-accent rounded-3xl p-8">
+          <div class="flex text-primary mb-5">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+
+          <p class="text-gray-700 leading-relaxed mb-8">
+            “The salon atmosphere is beautiful and the attention to detail is exceptional.”
+          </p>
+
+          <div class="flex items-center gap-4">
+            <img src="https://randomuser.me/api/portraits/women/65.jpg"
+                 class="w-14 h-14 rounded-full object-cover"
+                 alt="Client">
+            <div>
+              <h4 class="font-semibold">Sarah Johnson</h4>
+              <p class="text-sm text-gray-500">VIP Package</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-accent rounded-3xl p-8">
+          <div class="flex text-primary mb-5">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+
+          <p class="text-gray-700 leading-relaxed mb-8">
+            “My lashes look amazing every single time. Professional, clean, and luxurious.”
+          </p>
+
+          <div class="flex items-center gap-4">
+            <img src="https://randomuser.me/api/portraits/women/22.jpg"
+                 class="w-14 h-14 rounded-full object-cover"
+                 alt="Client">
+            <div>
+              <h4 class="font-semibold">Emily Carter</h4>
+              <p class="text-sm text-gray-500">Lash Extensions</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-accent rounded-3xl p-8">
+          <div class="flex text-primary mb-5">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+
+          <p class="text-gray-700 leading-relaxed mb-8">
+            “The entire experience felt premium from start to finish. Highly recommended.”
+          </p>
+
+          <div class="flex items-center gap-4">
+            <img src="https://randomuser.me/api/portraits/women/33.jpg"
+                 class="w-14 h-14 rounded-full object-cover"
+                 alt="Client">
+            <div>
+              <h4 class="font-semibold">Maria Lewis</h4>
+              <p class="text-sm text-gray-500">Hair Styling</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24 bg-dark text-white">
+    <div class="max-w-7xl mx-auto px-5">
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+        <!-- Form -->
+        <div>
+          <p class="uppercase tracking-[0.3em] text-primary text-sm mb-4">
+            Appointment
+          </p>
+
+          <h2 class="font-heading text-4xl md:text-5xl mb-8">
+            Book Your Visit
+          </h2>
+
+          <form id="bookingForm" class="space-y-6">
+
+            <div>
+              <label class="block mb-2 text-sm text-white/80">
+                Full Name
+              </label>
+
+              <input
+                type="text"
+                required
+                class="w-full rounded-2xl bg-white/10 border border-white/10 px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary"
+                placeholder="Your name"
+              />
+            </div>
+
+            <div>
+              <label class="block mb-2 text-sm text-white/80">
+                Email Address
+              </label>
+
+              <input
+                type="email"
+                required
+                class="w-full rounded-2xl bg-white/10 border border-white/10 px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary"
+                placeholder="your@email.com"
+              />
+            </div>
+
+            <div>
+              <label class="block mb-2 text-sm text-white/80">
+                Service
+              </label>
+
+              <select
+                class="w-full rounded-2xl bg-white/10 border border-white/10 px-5 py-4 focus:outline-none focus:ring-2 focus:ring-primary">
+                <option>Nail Art</option>
+                <option>Lash Extensions</option>
+                <option>Hair Styling</option>
+                <option>Brow Design</option>
+              </select>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-primary hover:bg-secondary transition rounded-full py-4 uppercase tracking-wide text-sm">
+              Submit Request
+            </button>
+
+            <div id="successMessage"
+                 class="hidden bg-green-500/10 border border-green-500/30 text-green-300 rounded-2xl p-4">
+              Your booking request has been submitted successfully.
+            </div>
+
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+
+          <p class="uppercase tracking-[0.3em] text-primary text-sm mb-4">
+            Contact
+          </p>
+
+          <h2 class="font-heading text-4xl md:text-5xl mb-8">
+            Visit Our Studio
+          </h2>
+
+          <div class="space-y-8 text-white/80">
+
+            <div class="flex gap-4">
+              <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                <i class="fa-solid fa-location-dot text-primary"></i>
+              </div>
+
+              <div>
+                <h3 class="text-white font-medium mb-1">Address</h3>
+                <p>123 Beauty Street, London</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                <i class="fa-solid fa-phone text-primary"></i>
+              </div>
+
+              <div>
+                <h3 class="text-white font-medium mb-1">Phone</h3>
+                <p>+44 20 1234 5678</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center">
+                <i class="fa-brands fa-instagram text-primary"></i>
+              </div>
+
+              <div>
+                <h3 class="text-white font-medium mb-1">Instagram</h3>
+                <p>@elegancebeauty</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="mt-12 bg-white/5 rounded-3xl p-8 border border-white/5">
+            <h3 class="font-heading text-2xl mb-6">
+              Opening Hours
+            </h3>
+
+            <div class="space-y-4 text-white/80">
+              <div class="flex justify-between">
+                <span>Monday - Friday</span>
+                <span>9:00 AM - 7:00 PM</span>
+              </div>
+
+              <div class="flex justify-between">
+                <span>Saturday</span>
+                <span>10:00 AM - 6:00 PM</span>
+              </div>
+
+              <div class="flex justify-between">
+                <span>Sunday</span>
+                <span>11:00 AM - 4:00 PM</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-8">
+    <div class="max-w-7xl mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-6">
+
+      <p class="text-white/60 text-sm">
+        © 2026 Elegance Beauty Salon. All rights reserved.
+      </p>
+
+      <div class="flex items-center gap-5 text-xl">
+        <a href="#" class="hover:text-primary transition">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#" class="hover:text-primary transition">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+
+        <a href="#" class="hover:text-primary transition">
+          <i class="fa-brands fa-pinterest"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    document.querySelectorAll(".mobile-link").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+
+    const bookingForm = document.getElementById("bookingForm");
+    const successMessage = document.getElementById("successMessage");
+
+    bookingForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      successMessage.classList.remove("hidden");
+
+      bookingForm.reset();
+
+      setTimeout(() => {
+        successMessage.classList.add("hidden");
+      }, 4000);
+    });
+  </script>
+
+</body>
+</html>
