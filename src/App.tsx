@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 // Image paths - place these in your /public/images/ folder
 const IMG = {
-  logo:  "/images/logo.jpg",
+  logo:  "assets/images/logo.jpg",
   nail1: "/images/nail1.jpg",   // blue swirl stiletto nails
   nail2: "/images/nail2.jpg",   // yellow french square nails
   nail3: "/images/nail3.jpg",   // red/white mixed stiletto
