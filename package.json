@@ -27,5 +27,11 @@
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.2",
     "vite": "^8.0.12"
-  }
+  },
+  "homepage": "https://Lord-Bish.github.io/ASA-website",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  } 
 }
+
