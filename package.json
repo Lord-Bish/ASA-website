@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "scripts": {
+  /*"scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
@@ -14,7 +14,7 @@
   "dependencies": {
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
-  },
+  },*/
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@types/node": "^24.12.3",
@@ -32,8 +32,12 @@
   },
   "homepage": "https://Lord-Bish.github.io/ASA-website",
   "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "preview": "vite preview"
   } 
 }
 
