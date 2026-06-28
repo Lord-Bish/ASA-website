@@ -186,20 +186,20 @@ const css = `
 `;
 
 const NAIL_GALLERY = [
-  { src: IMG.nail1, label: "Blue Swirl Stiletto" },
-  { src: IMG.nail2, label: "Yellow French Square" },
-  { src: IMG.nail3, label: "Red & White Stiletto" },
-  { src: IMG.nail4, label: "Artistic Multi-colour" },
-  { src: IMG.nail5, label: "Green Floral Stiletto" },
-  { src: IMG.nail6, label: "Pink & Gold Coffin" },
-  { src: IMG.nail7, label: "Nail Art" },
+  { src: IMG.nail1, label: "" },
+  { src: IMG.nail2, label: "" },
+  { src: IMG.nail3, label: "" },
+  { src: IMG.nail4, label: "" },
+  { src: IMG.nail5, label: "" },
+  { src: IMG.nail6, label: "" },
+  { src: IMG.nail7, label: "" },
 ];
 
 const LASH_GALLERY = [
-  { src: IMG.lash1, label: "Classic Lash Extension" },
-  { src: IMG.lash2, label: "Volume Lashes" },
-  { src: IMG.lash3, label: "Mega Volume" },
-  { src: IMG.lash4, label: "Natural Lashes" },
+  { src: IMG.lash1, label: "Classic" },
+  { src: IMG.lash2, label: "Hybrid" },
+  { src: IMG.lash3, label: "Wispy" },
+  { src: IMG.lash4, label: "Volume" },
 ];
 
 const PRICE_CATS = [
