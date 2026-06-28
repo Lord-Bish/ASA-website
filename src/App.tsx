@@ -360,8 +360,8 @@ export default function AsaWinkAndTip() {
         <a className="nav-logo" href="#">
           <img src={IMG.logo} alt="ASA. WinkandTip" />
           <div className="nav-logo-text">
-            <span>ASA. Wink&Tip</span>
-            <span>Beauty · Perfection</span>
+            <span>ASA.Wink&Tip</span>
+            <span>Beauty. Class. Perfection</span>
           </div>
         </a>
         <ul className="nav-links">
@@ -399,14 +399,14 @@ export default function AsaWinkAndTip() {
       <section className="hero" id="hero">
         <div>
           <div className="hero-logo-wrap">
-            <img src={IMG.logo} alt="ASA. WinkandTip" className="hero-logo" />
+            <img src={IMG.logo} alt="ASA.WinkandTip" className="hero-logo" />
             <div className="hero-logo-ring" />
           </div>
           <p className="hero-eyebrow">Nails · Lashes · Brows · Chikas, Old Karu Rd, Abuja</p>
           <h1 className="hero-title">
-            <span className="shine">ASA. WinkandTip</span>
+            <span className="shine">ASA.WinkandTip</span>
           </h1>
-          <p className="hero-tagline">Beauty. Perfection.</p>
+          <p className="hero-tagline">Beauty. Class. Perfection.</p>
           <p className="hero-sub">
             Premium nail art, lash extensions, microblading and more -
             crafted with care, built to last.
