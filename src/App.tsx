@@ -266,11 +266,36 @@ const PRICE_CATS = [
     ]
   },
   {
-    icon: "👁️", title: "Lashes & Brows",
+    icon: "👁️", title: "Eyelash Extensions",
     items: [
-      { name: "Lash Extension", price: "On request" },
-      { name: "Cluster Lashes", price: "On request" },
-      { name: "Micro-blading", price: "On request" },
+      { name: "Classic", price: "₦10,000" },
+      { name: "Hybrid", price: "₦12,000" },
+      { name: "Volume", price: "₦15,000" },
+      { name: "Wispy", price: "₦5,000" },
+    ]
+  },
+  {
+    icon: "✂️", title: "Lash Refill",
+    items: [
+      { name: "Volume", price: "₦7,000" },
+      { name: "Hybrid / Classic", price: "₦5,000" },
+      { name: "Lash Removal", price: "₦2,000" },
+    ]
+  },
+  {
+    icon: "🖌️", title: "Eyebrows",
+    items: [
+      { name: "Ombré Brows", price: "₦25,000" },
+      { name: "Micro Blading", price: "₦20,000" },
+      { name: "Brow Lamination & Tint", price: "₦10,000" },
+      { name: "Brow Touch-up", price: "₦15,000" },
+      { name: "Eyebrow Tint Only", price: "₦5,000" },
+      { name: "Combo Brows", price: "₦30,000" },
+    ]
+  },
+  {
+    icon: "💅", title: "Press-on Nails",
+    items: [
       { name: "Press-on Nails", price: "On request" },
     ]
   },
@@ -508,9 +533,20 @@ export default function AsaWinkAndTip() {
                 <option>Gel-X Extensions</option>
                 <option>BIAB / Builder Gel</option>
                 <option>Toes</option>
-                <option>Lash Extension</option>
-                <option>Cluster Lashes</option>
-                <option>Micro-blading</option>
+                <option>Classic Lashes</option>
+                    <option>Hybrid Lashes</option>
+                    <option>Volume Lashes</option>
+                    <option>Wispy Lashes</option>
+                    <option>Lash Refill</option>
+                    <option>Lash Removal</option>
+                    <option>Ombré Brows</option>
+                    <option>Micro Blading</option>
+                    <option>Brow Lamination & Tint</option>
+                    <option>Brow Touch-up</option>
+                    <option>Eyebrow Tint Only</option>
+                    <option>Combo Brows</option>
+                
+                
                 <option>Press-on Nails</option>
                 <option>Other / Multiple</option>
               </select>
