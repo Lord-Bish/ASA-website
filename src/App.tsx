@@ -302,7 +302,7 @@ const PRICE_CATS = [
 ];
 
 const WHY = [
-  { icon: "💅", title: "Neat & Professional", desc: "Every set finished with precision — no shortcuts, no rushing." },
+  { icon: "💅", title: "Neat & Professional", desc: "Every set finished with precision - no shortcuts, no rushing." },
   { icon: "⏳", title: "Long-Lasting Results", desc: "Premium products chosen for durability and a flawless finish." },
   { icon: "✨", title: "Quality Products Only", desc: "Only trusted nail and lash brands used on every client." },
   { icon: "💜", title: "Affordable Prices", desc: "Luxury results without the luxury price tag." },
@@ -360,7 +360,7 @@ export default function AsaWinkAndTip() {
         <a className="nav-logo" href="#">
           <img src={IMG.logo} alt="ASA. WinkandTip" />
           <div className="nav-logo-text">
-            <span>ASA. WinkandTip</span>
+            <span>ASA. Wink&Tip</span>
             <span>Beauty · Perfection</span>
           </div>
         </a>
@@ -408,7 +408,7 @@ export default function AsaWinkAndTip() {
           </h1>
           <p className="hero-tagline">Beauty. Perfection.</p>
           <p className="hero-sub">
-            Premium nail art, lash extensions, microblading and more —
+            Premium nail art, lash extensions, microblading and more -
             crafted with care, built to last.
           </p>
           <div className="hero-contact">
@@ -417,7 +417,7 @@ export default function AsaWinkAndTip() {
           </div>
           <div className="hero-actions">
             <button className="btn-primary" onClick={() => scrollTo("booking")}>Book a Treatment</button>
-            <button className="btn-ghost" onClick={() => scrollTo("gallery")}>View Our Work</button>
+            <button className="btn-ghost" onClick={() => scrollTo("gallery")}>View Our Works</button>
           </div>
           <div className="hero-socials">
             <a href="https://www.tiktok.com/@asa.winkandtip" target="_blank" rel="noreferrer">🎵 @asa.winkandtip</a>
@@ -430,7 +430,7 @@ export default function AsaWinkAndTip() {
       <section className="gallery" id="gallery">
         <div className="section-top">
           <p className="section-label">Portfolio</p>
-          <h2 className="section-title">Our Work</h2>
+          <h2 className="section-title">Our Works</h2>
           <p className="section-body">Every set is hand-crafted. Tap any image to view in full.</p>
         </div>
         <div className="gallery-tabs">
@@ -459,7 +459,7 @@ export default function AsaWinkAndTip() {
         <div className="section-top">
           <p className="section-label">Pricing</p>
           <h2 className="section-title">Transparent Pricing</h2>
-          <p className="section-body">No hidden fees. All prices listed clearly — design add-ons subject to style & time.</p>
+          <p className="section-body">No hidden fees. All prices listed clearly - design add-ons subject to style & time.</p>
         </div>
         <div className="services-grid">
           {PRICE_CATS.map(cat => (
